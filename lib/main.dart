@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:the_ecommerce/utilities/router.dart';
+import 'package:the_ecommerce/utilities/routes.dart';
 
 void main() {
   runApp(const MyApp());
@@ -15,8 +17,10 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
+        scaffoldBackgroundColor: const Color(0xFFE5E5E5),
       ),
-      home: Container(),
+      onGenerateRoute: onGenerate,
+      initialRoute: AppRoutes.loginPageRoute,
     );
   }
 }
